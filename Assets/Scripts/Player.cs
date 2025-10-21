@@ -1,10 +1,11 @@
 using UnityEngine;
-
+using System;
 public class NewMonoBehaviourScript : MonoBehaviour
 {
-
     [SerializeField] public float moveSpeed = 5f;
     [SerializeField] public float jumpForce = 5f;
+
+    [SerializeField] private SpriteRenderer spriteRenderer;
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
@@ -12,7 +13,9 @@ public class NewMonoBehaviourScript : MonoBehaviour
     private Rigidbody2D rb;
     private bool isGrounded;
 
-    [SerializeField]private Animator animator;
+    private float xPosLastFrame;
+
+    [SerializeField] private Animator animator;
 
     void Start()
     {
@@ -21,13 +24,19 @@ public class NewMonoBehaviourScript : MonoBehaviour
     }
     void Update()
     {
-        //Jump
+        flipCharacterX();
+
+        // Jump
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            isGrounded = false;
+            animator.SetBool("isJumping", !isGrounded);
         }
 
     }
+
+
 
     private void FixedUpdate()
     {
@@ -38,14 +47,40 @@ public class NewMonoBehaviourScript : MonoBehaviour
         float moveInput = Input.GetAxis("Horizontal"); //  -1 or 1
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
+        animator.SetFloat("xVelocity", Math.Abs(rb.linearVelocity.x));
+        animator.SetFloat("yVelocity", rb.linearVelocity.y);
+
         if (moveInput != 0)
         {
-            animator.SetBool("IsRunning", true);
+            animator.SetBool("isRunning", true);
         }
+
         else
         {
-            animator.SetBool("IsRunning", false);
+            animator.SetBool("isRunning", false);
         }
     }
-}
+    
+     private void flipCharacterX()
+    {
+        float moveInput = Input.GetAxis("Horizontal"); //  -1 or 1
+        
+        if (moveInput < 0 && (transform.position.x < xPosLastFrame))
+        {
+            spriteRenderer.flipX = true;
+        }
 
+        else if (moveInput > 0 && (transform.position.x > xPosLastFrame))
+        {
+            spriteRenderer.flipX = false;
+        }
+
+        xPosLastFrame = transform.position.x;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) // Added By Rami for Animation
+    {
+        isGrounded = true;
+        animator.SetBool("isJumping", !isGrounded);
+    }
+}
