@@ -46,14 +46,6 @@ public class NewMonoBehaviourScript : MonoBehaviour
         {
             animator.SetBool("IsRunning", false);
         }
-
-
     }
-
-    private void SetAnimation()
-    {
-
-    }
-
 }
 
