@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: 60c859eb10f8a0c43a28ccd925a0402a
+AssetOrigin:
+  serializedVersion: 1
+  productId: 330017
+  packageName: Platformer Tileset - Pixelart Caves
+  packageVersion: 1.0
+  assetPath: Assets/CaveAssets/Spritesheets/Decorations/websSprites.png
+  uploadId: 807122
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -1538,10 +1545,3 @@ TextureImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 330017
-  packageName: Platformer Tileset - Pixelart Caves
-  packageVersion: 1.0
-  assetPath: Assets/CaveAssets/Spritesheets/Decorations/websSprites.png
-  uploadId: 807122

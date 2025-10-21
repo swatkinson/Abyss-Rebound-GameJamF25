@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: d365e987d3454ce418f2f611f7f68611
+AssetOrigin:
+  serializedVersion: 1
+  productId: 330017
+  packageName: Platformer Tileset - Pixelart Caves
+  packageVersion: 1.0
+  assetPath: Assets/CaveAssets/Spritesheets/Characters/dwarfSpritesheet2.png
+  uploadId: 807122
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -1064,10 +1071,3 @@ TextureImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 330017
-  packageName: Platformer Tileset - Pixelart Caves
-  packageVersion: 1.0
-  assetPath: Assets/CaveAssets/Spritesheets/Characters/dwarfSpritesheet2.png
-  uploadId: 807122

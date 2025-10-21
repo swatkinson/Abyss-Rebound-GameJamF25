@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: 1ccfffcd158d1e74b9f7d4fc79e2e7bf
+AssetOrigin:
+  serializedVersion: 1
+  productId: 330017
+  packageName: Platformer Tileset - Pixelart Caves
+  packageVersion: 1.0
+  assetPath: Assets/CaveAssets/Tiles/CaveDetailTiles2.png
+  uploadId: 807122
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -520,10 +527,3 @@ TextureImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 330017
-  packageName: Platformer Tileset - Pixelart Caves
-  packageVersion: 1.0
-  assetPath: Assets/CaveAssets/Tiles/CaveDetailTiles2.png
-  uploadId: 807122

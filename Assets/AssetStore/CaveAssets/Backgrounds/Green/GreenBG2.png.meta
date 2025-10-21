@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: 12341a41b2050a140b35e19e4b31488c
+AssetOrigin:
+  serializedVersion: 1
+  productId: 330017
+  packageName: Platformer Tileset - Pixelart Caves
+  packageVersion: 1.0
+  assetPath: Assets/CaveAssets/Backgrounds/Green/GreenBG2.png
+  uploadId: 807122
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -180,10 +187,3 @@ TextureImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 330017
-  packageName: Platformer Tileset - Pixelart Caves
-  packageVersion: 1.0
-  assetPath: Assets/CaveAssets/Backgrounds/Green/GreenBG2.png
-  uploadId: 807122

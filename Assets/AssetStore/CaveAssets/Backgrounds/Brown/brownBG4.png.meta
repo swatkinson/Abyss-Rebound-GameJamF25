@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: 5d68025e5ba85ae43ac7708d4d603c53
+AssetOrigin:
+  serializedVersion: 1
+  productId: 330017
+  packageName: Platformer Tileset - Pixelart Caves
+  packageVersion: 1.0
+  assetPath: Assets/CaveAssets/Backgrounds/Brown/brownBG4.png
+  uploadId: 807122
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -206,10 +213,3 @@ TextureImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 330017
-  packageName: Platformer Tileset - Pixelart Caves
-  packageVersion: 1.0
-  assetPath: Assets/CaveAssets/Backgrounds/Brown/brownBG4.png
-  uploadId: 807122

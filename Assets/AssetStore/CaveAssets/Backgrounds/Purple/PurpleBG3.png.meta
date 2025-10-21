@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: ee226159f3af5d74893e33ed4ec9c3dd
+AssetOrigin:
+  serializedVersion: 1
+  productId: 330017
+  packageName: Platformer Tileset - Pixelart Caves
+  packageVersion: 1.0
+  assetPath: Assets/CaveAssets/Backgrounds/Purple/PurpleBG3.png
+  uploadId: 807122
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -180,10 +187,3 @@ TextureImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 330017
-  packageName: Platformer Tileset - Pixelart Caves
-  packageVersion: 1.0
-  assetPath: Assets/CaveAssets/Backgrounds/Purple/PurpleBG3.png
-  uploadId: 807122
