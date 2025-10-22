@@ -1,20 +1,32 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using TMPro;
 
 public class EndZone : MonoBehaviour
 {
-    [SerializeField] private GameObject winText;  // Assign a UI Text or Canvas element
-    [SerializeField] private float resetDelay = 3f;
+    [SerializeField] private TMP_Text winText;
+    [SerializeField] private Camera winCamera;
+    [SerializeField] private float resetDelay = 5f;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
+            // Show "You Win!"
             if (winText != null)
-                winText.SetActive(true);
+                winText.gameObject.SetActive(true);
 
-            // Restart the current scene after delay
+            // Switch cameras
+            if (winCamera != null)
+            {
+                Camera mainCam = Camera.main;
+                if (mainCam != null)
+                    mainCam.gameObject.SetActive(false);
+
+                winCamera.gameObject.SetActive(true);
+            }
+
+            // Restart scene after a delay
             Invoke(nameof(RestartGame), resetDelay);
         }
     }
