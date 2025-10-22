@@ -17,6 +17,9 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     [SerializeField] private Animator animator;
 
+    public AudioClip jumpSound;
+    public AudioClip landSound;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -32,6 +35,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             isGrounded = false;
             animator.SetBool("isJumping", !isGrounded);
+            AudioManager.Instance.PlaySFX(jumpSound, 0.2f); // Jump SFX
         }
 
     }
@@ -78,9 +82,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
         xPosLastFrame = transform.position.x;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) // Added By Rami for Animation
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         isGrounded = true;
         animator.SetBool("isJumping", !isGrounded);
+
+        AudioManager.Instance.PlaySFX(landSound, 0.1f); // Landed SFX
     }
 }
