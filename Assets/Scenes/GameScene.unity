@@ -49425,6 +49425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a4de20e7e778bb469a68f5e976bc932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeathBox
+  abyssSound: {fileID: 8300000, guid: 8ff2a2d7e79f81c40ac447512f879374, type: 3}
 --- !u!61 &672835690
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -53728,6 +53729,7 @@ MonoBehaviour:
     m_Bits: 64
   moveSpeed: 5
   yOffset: 7
+  maxDropDistance: 10
   stopEpsilon: 0.005
   groundCheckRadius: 0.1
   groundCheckOffset: {x: 0, y: -1}
@@ -57300,6 +57302,7 @@ MonoBehaviour:
   winText: {fileID: 180102348}
   winCamera: {fileID: 780008684}
   resetDelay: 3
+  winSound: {fileID: 8300000, guid: cfce0cea076109f478783201b2a9f57f, type: 3}
 --- !u!61 &1626813696
 BoxCollider2D:
   m_ObjectHideFlags: 0

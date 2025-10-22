@@ -8,6 +8,8 @@ public class EndZone : MonoBehaviour
     [SerializeField] private Camera winCamera;
     [SerializeField] private float resetDelay = 5f;
 
+    public AudioClip winSound;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -15,6 +17,9 @@ public class EndZone : MonoBehaviour
             // Show "You Win!"
             if (winText != null)
                 winText.gameObject.SetActive(true);
+
+            // Play sound
+            AudioManager.Instance.PlaySFX(winSound, 0.1f);
 
             // Switch cameras
             if (winCamera != null)
