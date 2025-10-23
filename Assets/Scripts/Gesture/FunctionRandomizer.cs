@@ -79,7 +79,6 @@ public class FunctionRandomizer : MonoBehaviour
     public void Pointing() => InvokeGesture(GestureType.Pointing);
     public void Rad() => InvokeGesture(GestureType.Rad);
     public void Rock() => InvokeGesture(GestureType.Rock);
-    public void Tea() => InvokeGesture(GestureType.Tea);
 
     private void InvokeGesture(GestureType type)
     {
