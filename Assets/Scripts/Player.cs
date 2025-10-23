@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
-public class NewMonoBehaviourScript : MonoBehaviour
+using NOVA.Scripts;
+public class PlayerInput : MonoBehaviour
 {
     [SerializeField] public float moveSpeed = 5f;
     [SerializeField] public float jumpForce = 5f;
@@ -9,6 +10,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
+
+    [SerializeField] public GestureData[] Gestures;
 
     private Rigidbody2D rb;
     private bool isGrounded;
@@ -19,6 +22,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     public AudioClip jumpSound;
     public AudioClip landSound;
+
+  
 
     void Start()
     {
@@ -32,16 +37,12 @@ public class NewMonoBehaviourScript : MonoBehaviour
         // Jump
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            isGrounded = false;
-            animator.SetBool("isJumping", !isGrounded);
-            AudioManager.Instance.PlaySFX(jumpSound, 0.2f); // Jump SFX
+            Jump();
         }
 
     }
 
-
-
+    
     private void FixedUpdate()
     {
         // Check if grounded
@@ -49,6 +50,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
         // Left/Right movement
         float moveInput = Input.GetAxis("Horizontal"); //  -1 or 1
+
+
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
         animator.SetFloat("xVelocity", Math.Abs(rb.linearVelocity.x));
@@ -88,5 +91,46 @@ public class NewMonoBehaviourScript : MonoBehaviour
         animator.SetBool("isJumping", !isGrounded);
 
         AudioManager.Instance.PlaySFX(landSound, 0.1f); // Landed SFX
+    }
+
+    public void Jump()
+    {
+        if (isGrounded)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            isGrounded = false;
+            animator.SetBool("isJumping", !isGrounded);
+            AudioManager.Instance.PlaySFX(jumpSound, 0.2f); // Jump SFX
+
+        }
+    }
+
+    public void Move(float moveInput)
+    {
+
+        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+
+        animator.SetFloat("xVelocity", Math.Abs(rb.linearVelocity.x));
+        animator.SetFloat("yVelocity", rb.linearVelocity.y);
+
+        if (moveInput != 0)
+        {
+            animator.SetBool("isRunning", true);
+        }
+
+        else
+        {
+            animator.SetBool("isRunning", false);
+        }
+    }
+
+    public void MoveLeft()
+    {
+        Move(-1);
+    }
+
+    public void MoveRight()
+    {
+        Move(1);
     }
 }
