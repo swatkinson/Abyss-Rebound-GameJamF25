@@ -12,6 +12,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool isGrounded;
+    public bool isOnIce = false;
 
     private float xPosLastFrame;
 
@@ -89,4 +90,10 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
         AudioManager.Instance.PlaySFX(landSound, 0.1f); // Landed SFX
     }
+
+    public bool IsGrounded()
+    {
+        return isGrounded;
+    }
+
 }
