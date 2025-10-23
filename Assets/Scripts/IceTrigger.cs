@@ -11,7 +11,7 @@ public class IceZoneTrigger : MonoBehaviour
     {
         if (other.CompareTag(playerTag))
         {
-            NewMonoBehaviourScript player = other.GetComponent<NewMonoBehaviourScript>();
+            PlayerInput player = other.GetComponent<PlayerInput>();
             if (player != null)
             {
                 // Boost speed
@@ -32,7 +32,7 @@ public class IceZoneTrigger : MonoBehaviour
     {
         if (other.CompareTag(playerTag))
         {
-            NewMonoBehaviourScript player = other.GetComponent<NewMonoBehaviourScript>();
+            PlayerInput player = other.GetComponent<PlayerInput>();
             if (player != null)
             {
                 // Optional: reset speed and sliding if leaving ice zone
