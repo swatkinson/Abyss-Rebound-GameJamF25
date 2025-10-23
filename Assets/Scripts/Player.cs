@@ -17,6 +17,7 @@ public class PlayerInput : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool isGrounded;
+    public bool isOnIce = false;
 
     private float xPosLastFrame;
 
@@ -37,13 +38,6 @@ public class PlayerInput : MonoBehaviour
     void Update()
     {
         flipCharacterX();
-
-        // Jump
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            Jump();
-        }
-
     }
 
     
@@ -95,6 +89,11 @@ public class PlayerInput : MonoBehaviour
         AudioManager.Instance.PlaySFX(landSound, 0.1f); // Landed SFX
     }
 
+    public bool IsGrounded()
+    {
+        return isGrounded;
+    }
+
     public void Jump()
     {
         if (isGrounded)
@@ -112,7 +111,7 @@ public class PlayerInput : MonoBehaviour
     {
         moveInput = -1f;
 
-        // if there’s already a pending reset, stop it
+        // if thereï¿½s already a pending reset, stop it
         if (resetCoroutine != null)
             StopCoroutine(resetCoroutine);
 
@@ -124,7 +123,7 @@ public class PlayerInput : MonoBehaviour
     {
         moveInput = 1f;
 
-        // if there’s already a pending reset, stop it
+        // if thereï¿½s already a pending reset, stop it
         if (resetCoroutine != null)
             StopCoroutine(resetCoroutine);
 
