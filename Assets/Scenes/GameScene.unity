@@ -209,51 +209,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &83096061
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 83096063}
-  - component: {fileID: 83096062}
-  m_Layer: 0
-  m_Name: GestureFunctions
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &83096062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 83096061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5b01375bfed4d4a9f94ab62ad9bb5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GestureFunctions
-  funRan: {fileID: 110617676}
---- !u!4 &83096063
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 83096061}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.40268, y: -15.52618, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &105411785
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,7 +356,7 @@ GameObject:
   - component: {fileID: 110617677}
   - component: {fileID: 110617676}
   m_Layer: 0
-  m_Name: FunctionRandomizer
+  m_Name: GestureRandomHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -420,7 +375,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FunctionRandomizer
   player: {fileID: 1468787325}
-  gf: {fileID: 83096062}
 --- !u!4 &110617677
 Transform:
   m_ObjectHideFlags: 0
@@ -58180,7 +58134,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751847633}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1751847636
 Camera:
   m_ObjectHideFlags: 0
@@ -60864,8 +60818,8 @@ MonoBehaviour:
       GestureEvent:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 83096062}
-            m_TargetAssemblyTypeName: GestureFunctions, Assembly-CSharp
+          - m_Target: {fileID: 110617676}
+            m_TargetAssemblyTypeName: FunctionRandomizer, Assembly-CSharp
             m_MethodName: ThumbRightL
             m_Mode: 1
             m_Arguments:
@@ -60880,8 +60834,8 @@ MonoBehaviour:
       GestureEvent:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 83096062}
-            m_TargetAssemblyTypeName: GestureFunctions, Assembly-CSharp
+          - m_Target: {fileID: 110617676}
+            m_TargetAssemblyTypeName: FunctionRandomizer, Assembly-CSharp
             m_MethodName: ThumbDownL
             m_Mode: 1
             m_Arguments:
@@ -60896,8 +60850,8 @@ MonoBehaviour:
       GestureEvent:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 83096062}
-            m_TargetAssemblyTypeName: GestureFunctions, Assembly-CSharp
+          - m_Target: {fileID: 110617676}
+            m_TargetAssemblyTypeName: FunctionRandomizer, Assembly-CSharp
             m_MethodName: ThumbLeftL
             m_Mode: 1
             m_Arguments:
@@ -60912,8 +60866,8 @@ MonoBehaviour:
       GestureEvent:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 83096062}
-            m_TargetAssemblyTypeName: GestureFunctions, Assembly-CSharp
+          - m_Target: {fileID: 110617676}
+            m_TargetAssemblyTypeName: FunctionRandomizer, Assembly-CSharp
             m_MethodName: ThumbUpL
             m_Mode: 1
             m_Arguments:
@@ -60928,8 +60882,8 @@ MonoBehaviour:
       GestureEvent:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 83096062}
-            m_TargetAssemblyTypeName: GestureFunctions, Assembly-CSharp
+          - m_Target: {fileID: 110617676}
+            m_TargetAssemblyTypeName: FunctionRandomizer, Assembly-CSharp
             m_MethodName: OpenHandRightL
             m_Mode: 1
             m_Arguments:
@@ -60944,8 +60898,8 @@ MonoBehaviour:
       GestureEvent:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 83096062}
-            m_TargetAssemblyTypeName: GestureFunctions, Assembly-CSharp
+          - m_Target: {fileID: 110617676}
+            m_TargetAssemblyTypeName: FunctionRandomizer, Assembly-CSharp
             m_MethodName: OpenHandLeftL
             m_Mode: 1
             m_Arguments:
@@ -60960,8 +60914,8 @@ MonoBehaviour:
       GestureEvent:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 83096062}
-            m_TargetAssemblyTypeName: GestureFunctions, Assembly-CSharp
+          - m_Target: {fileID: 110617676}
+            m_TargetAssemblyTypeName: FunctionRandomizer, Assembly-CSharp
             m_MethodName: FistUpL
             m_Mode: 1
             m_Arguments:
@@ -61029,4 +60983,3 @@ SceneRoots:
   - {fileID: 1363044586}
   - {fileID: 4723969441534485241}
   - {fileID: 110617677}
-  - {fileID: 83096063}
