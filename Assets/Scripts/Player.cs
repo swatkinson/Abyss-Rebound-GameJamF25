@@ -5,6 +5,9 @@ using System.Collections;
 
 public class PlayerInput : MonoBehaviour
 {
+
+    private Rigidbody2D rb;
+
     [SerializeField] public float moveSpeed = 5f;
     [SerializeField] public float jumpForce = 5f;
 
@@ -15,7 +18,6 @@ public class PlayerInput : MonoBehaviour
 
     [SerializeField] public GestureData[] Gestures;
 
-    private Rigidbody2D rb;
     private bool isGrounded;
     public bool isOnIce = false;
 
@@ -27,6 +29,7 @@ public class PlayerInput : MonoBehaviour
     public AudioClip landSound;
 
     private float moveInput = 0f;
+    private float keyboardInput = 0f;
     private Coroutine resetCoroutine;
 
 
@@ -35,6 +38,7 @@ public class PlayerInput : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
+
     void Update()
     {
         flipCharacterX();
@@ -58,9 +62,16 @@ public class PlayerInput : MonoBehaviour
         // Check if grounded
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
-        // Left/Right movement
-        moveInput = Input.GetAxisRaw("Horizontal");
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+        if(moveInput == 0f)
+        {
+            keyboardInput = Input.GetAxisRaw("Horizontal");
+            rb.linearVelocity = new Vector2(keyboardInput * moveSpeed, rb.linearVelocity.y);
+        }
+        else
+        {
+            rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+        }
+
 
         animator.SetFloat("xVelocity", Math.Abs(rb.linearVelocity.x));
         animator.SetFloat("yVelocity", rb.linearVelocity.y);
