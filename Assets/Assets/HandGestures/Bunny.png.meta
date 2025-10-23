@@ -116,10 +116,10 @@ TextureImporter:
       name: Bunny_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 0
-        width: 134
-        height: 162
+        x: 58
+        y: 14
+        width: 142
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

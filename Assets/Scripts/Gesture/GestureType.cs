@@ -13,6 +13,5 @@ public enum GestureType
     Peace,
     Pointing,
     Rad,
-    Rock,
-    Tea
+    Rock
 }
