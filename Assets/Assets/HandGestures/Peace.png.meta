@@ -116,10 +116,10 @@ TextureImporter:
       name: Peace_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 4
-        width: 117
-        height: 152
+        x: 62
+        y: 7
+        width: 122
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

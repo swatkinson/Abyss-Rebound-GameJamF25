@@ -3,8 +3,8 @@ guid: 31784f6e1b647e44cae3c5848cb3213a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2884440850262319092
-    second: 4 fingers_0
+      213: -7335542852284304123
+    second: 4 Fingers_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 4 fingers_0
+      name: 4 Fingers_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 3
-        width: 117
-        height: 172
+        x: 59
+        y: 10
+        width: 122
+        height: 182
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c002d70445868f7d0800000000000000
-      internalID: -2884440850262319092
+      spriteID: 50530f624aae23a90800000000000000
+      internalID: -7335542852284304123
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      4 fingers_0: -2884440850262319092
+      4 Fingers_0: -7335542852284304123
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

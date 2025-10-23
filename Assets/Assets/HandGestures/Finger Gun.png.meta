@@ -116,10 +116,10 @@ TextureImporter:
       name: Finger Gun_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1
-        width: 203
-        height: 154
+        x: 5
+        y: 11
+        width: 212
+        height: 162
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

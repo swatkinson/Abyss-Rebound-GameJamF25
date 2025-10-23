@@ -116,10 +116,10 @@ TextureImporter:
       name: Rad_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 3
-        width: 186
-        height: 155
+        x: 26
+        y: 25
+        width: 192
+        height: 162
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
