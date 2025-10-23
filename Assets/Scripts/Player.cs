@@ -1,6 +1,8 @@
 using UnityEngine;
 using System;
 using NOVA.Scripts;
+using System.Collections;
+
 public class PlayerInput : MonoBehaviour
 {
     [SerializeField] public float moveSpeed = 5f;
@@ -23,7 +25,9 @@ public class PlayerInput : MonoBehaviour
     public AudioClip jumpSound;
     public AudioClip landSound;
 
-  
+    private float moveInput = 0f;
+    private Coroutine resetCoroutine;
+
 
     void Start()
     {
@@ -49,7 +53,7 @@ public class PlayerInput : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
         // Left/Right movement
-        float moveInput = Input.GetAxis("Horizontal"); //  -1 or 1
+        //float moveInput = Input.GetAxis("Horizontal"); //  -1 or 1
 
 
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
@@ -69,9 +73,7 @@ public class PlayerInput : MonoBehaviour
     }
     
      private void flipCharacterX()
-    {
-        float moveInput = Input.GetAxis("Horizontal"); //  -1 or 1
-        
+    {        
         if (moveInput < 0 && (transform.position.x < xPosLastFrame))
         {
             spriteRenderer.flipX = true;
@@ -105,32 +107,35 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
-    public void Move(float moveInput)
-    {
-
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
-
-        animator.SetFloat("xVelocity", Math.Abs(rb.linearVelocity.x));
-        animator.SetFloat("yVelocity", rb.linearVelocity.y);
-
-        if (moveInput != 0)
-        {
-            animator.SetBool("isRunning", true);
-        }
-
-        else
-        {
-            animator.SetBool("isRunning", false);
-        }
-    }
 
     public void MoveLeft()
     {
-        Move(-1);
+        moveInput = -1f;
+
+        // if there’s already a pending reset, stop it
+        if (resetCoroutine != null)
+            StopCoroutine(resetCoroutine);
+
+        // start a new reset coroutine
+        resetCoroutine = StartCoroutine(ResetMoveInputAfterDelay(0.8f));
     }
 
     public void MoveRight()
     {
-        Move(1);
+        moveInput = 1f;
+
+        // if there’s already a pending reset, stop it
+        if (resetCoroutine != null)
+            StopCoroutine(resetCoroutine);
+
+        // start a new reset coroutine
+        resetCoroutine = StartCoroutine(ResetMoveInputAfterDelay(0.8f));
+    }
+
+    private IEnumerator ResetMoveInputAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        moveInput = 0f;
+        resetCoroutine = null;
     }
 }
