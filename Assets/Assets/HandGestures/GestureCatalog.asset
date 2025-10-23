@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeef52df93c3f474e9352981d973ac70, type: 3}
+  m_Name: GestureCatalog
+  m_EditorClassIdentifier: Assembly-CSharp::GestureCatalog
+  items:
+  - type: 0
+    sprite: {fileID: 6592741258298744956, guid: 1e0a017c029ad134ba514ca4b3e158ab, type: 3}
+  - type: 1
+    sprite: {fileID: -2884440850262319092, guid: 31784f6e1b647e44cae3c5848cb3213a, type: 3}
+  - type: 2
+    sprite: {fileID: 8389134475083476877, guid: fb93b2ec37dcfd841937a94413c9267b, type: 3}
+  - type: 3
+    sprite: {fileID: -2942823943379307754, guid: cadf0400ec398774e9910fa12106a52b, type: 3}
+  - type: 4
+    sprite: {fileID: -1088982491853983780, guid: 91811bd8422f34a4c98b4d14fca92c4e, type: 3}
+  - type: 5
+    sprite: {fileID: 1121475878830515692, guid: e3681815f7e0e1144b52a653db0dd192, type: 3}
+  - type: 6
+    sprite: {fileID: -7371377421697620850, guid: 6d0de436a99c024499cc16ccd057deba, type: 3}
+  - type: 8
+    sprite: {fileID: -5191308225362931239, guid: a51ea9a993d7c0647b3faafcb062ba1f, type: 3}
+  - type: 9
+    sprite: {fileID: 7927075446777032201, guid: fc2a85d24cc50ca4392f391a05d9e263, type: 3}
+  - type: 10
+    sprite: {fileID: -3269679036098235631, guid: 0a383d6a6cae1634282544636ca5d97e, type: 3}
+  - type: 11
+    sprite: {fileID: 5265652934973558077, guid: 95b31a2cff741004c90548607958bc3d, type: 3}
+  - type: 12
+    sprite: {fileID: -3293557321479502476, guid: 4439a606ea641d24f9cd4604531fcaa8, type: 3}
+  - type: 13
+    sprite: {fileID: 3452003437791708593, guid: 6bf347c861962b84fa39dc7c3fae1b83, type: 3}
+  - type: 14
+    sprite: {fileID: -3070273842284801829, guid: 2440d0130759f7346a14c1636bd07b6d, type: 3}
+  - type: 7
+    sprite: {fileID: -9090430552245598661, guid: b355cbfdecfc14843be2fd8b234b97d5, type: 3}
