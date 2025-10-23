@@ -4,6 +4,7 @@ public class Camera_Change : MonoBehaviour
 {
     public Camera MainCamera; // This follows the player
     public Camera Camera; // This stays still in the room
+    public Canvas UICanvas;
 
     private void Start()
     {
@@ -22,17 +23,11 @@ public class Camera_Change : MonoBehaviour
             if (MainCamera != null) MainCamera.enabled = false;
             if (Camera != null) Camera.enabled = true;
         }
-    }
 
-    private void OnTriggerExit(Collider2D  other)
-    {
-        if (other.CompareTag("Player"))
+        // Update the Canvas render camera
+        if (UICanvas != null)
         {
-            Debug.Log("Player exited the camera switch zone.");
-
-            // Switch back to main camera
-            if (MainCamera != null) MainCamera.enabled = true;
-            if (Camera != null) Camera.enabled = false;
+            UICanvas.worldCamera = Camera;
         }
     }
 }

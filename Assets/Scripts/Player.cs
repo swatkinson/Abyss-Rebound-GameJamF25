@@ -117,7 +117,7 @@ public class PlayerInput : MonoBehaviour
             StopCoroutine(resetCoroutine);
 
         // start a new reset coroutine
-        resetCoroutine = StartCoroutine(ResetMoveInputAfterDelay(0.8f));
+        resetCoroutine = StartCoroutine(ResetMoveInputAfterDelay(0.3f));
     }
 
     public void MoveRight()
@@ -129,7 +129,7 @@ public class PlayerInput : MonoBehaviour
             StopCoroutine(resetCoroutine);
 
         // start a new reset coroutine
-        resetCoroutine = StartCoroutine(ResetMoveInputAfterDelay(0.8f));
+        resetCoroutine = StartCoroutine(ResetMoveInputAfterDelay(0.3f));
     }
 
     private IEnumerator ResetMoveInputAfterDelay(float delay)
