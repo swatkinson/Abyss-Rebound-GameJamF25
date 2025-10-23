@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GestureCatalog
   items:
   - type: 0
-    sprite: {fileID: 6592741258298744956, guid: 1e0a017c029ad134ba514ca4b3e158ab, type: 3}
+    sprite: {fileID: -6730606601495337799, guid: 1e0a017c029ad134ba514ca4b3e158ab, type: 3}
   - type: 1
-    sprite: {fileID: -2884440850262319092, guid: 31784f6e1b647e44cae3c5848cb3213a, type: 3}
+    sprite: {fileID: -7335542852284304123, guid: 31784f6e1b647e44cae3c5848cb3213a, type: 3}
   - type: 2
     sprite: {fileID: 8389134475083476877, guid: fb93b2ec37dcfd841937a94413c9267b, type: 3}
   - type: 3
-    sprite: {fileID: -2942823943379307754, guid: cadf0400ec398774e9910fa12106a52b, type: 3}
+    sprite: {fileID: 4117159079818441743, guid: cadf0400ec398774e9910fa12106a52b, type: 3}
   - type: 4
     sprite: {fileID: -1088982491853983780, guid: 91811bd8422f34a4c98b4d14fca92c4e, type: 3}
   - type: 5
