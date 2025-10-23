@@ -38,6 +38,18 @@ public class PlayerInput : MonoBehaviour
     void Update()
     {
         flipCharacterX();
+
+        //Restart
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        }
+
+        //Jump
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Jump();
+        }
     }
 
     
@@ -47,9 +59,7 @@ public class PlayerInput : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
         // Left/Right movement
-        //float moveInput = Input.GetAxis("Horizontal"); //  -1 or 1
-
-
+        moveInput = Input.GetAxisRaw("Horizontal");
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
         animator.SetFloat("xVelocity", Math.Abs(rb.linearVelocity.x));
