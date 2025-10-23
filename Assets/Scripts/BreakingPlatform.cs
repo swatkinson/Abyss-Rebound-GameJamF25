@@ -6,7 +6,7 @@ public class BreakingPlatform : MonoBehaviour
 {
     [Header("Timings")]
     [SerializeField] private float disappearDelay = 1.0f;   // Time before platform disappears after touch
-    [SerializeField] private float reappearDelay = 2.0f;    // Time before it reappears again
+    [SerializeField] private float reappearDelay = 2.0f;    
 
     [Header("Components")]
     [SerializeField] private Collider2D platformCollider;
