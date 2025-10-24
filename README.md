@@ -1,6 +1,13 @@
-# Abyss-Rebinded-GameJamF25
+# Abyss Rebound (GameJam F25)
 
+Foddian Hand-gesture 2D platformer made for the Fall 2025 Game Jam at [Conestoga College](https://gamejam.ca).
 
-## Sketchy Download Link:
-https://drive.google.com/file/d/1lhBJxrYgfdFFOtK7Y61HKEkkQCe2_mNz/view?usp=drive_link
-(or, pull the Unity files and run it through Unity 6.2)
+---
+
+## 🎮 Play on Itch.io  
+[**Abyss Rebound**](https://yullitsael.itch.io/abyss-rebound)
+
+---
+
+## 🖐️ Nova (Hand Gesture Software)  
+Uses [**Nova**](https://github.com/GYOUDNova/Nova/wiki/Installation-Instructions) for gesture input.
